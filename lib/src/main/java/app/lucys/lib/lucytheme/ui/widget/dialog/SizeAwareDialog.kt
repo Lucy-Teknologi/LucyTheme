@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.widget
+package app.lucys.lib.lucytheme.ui.widget.dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -33,6 +33,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import app.lucys.lib.lucytheme.ui.theme.LucyTheme
 import app.lucys.lib.lucytheme.ui.util.SizeCategory
+import app.lucys.lib.lucytheme.ui.widget.appbar.LucyAppBar
 
 /**
  * A "Size-Aware" component that will render a dialog with a different layout depending on the

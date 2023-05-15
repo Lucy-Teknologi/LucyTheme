@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.widget
+package app.lucys.lib.lucytheme.ui.widget.numpad
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

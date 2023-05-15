@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.widget
+package app.lucys.lib.lucytheme.ui.widget.appbar
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
