@@ -19,10 +19,10 @@ import app.lucys.lib.lucytheme.ui.theme.LucyTheme
  */
 @Immutable
 class LucyPagerHeaderColors internal constructor(
-    private val contentColor: Color,
-    private val highlightColor: Color,
-    private val selectedContentColor: Color,
-    private val selectedHighlightColor: Color,
+    val contentColor: Color,
+    val highlightColor: Color,
+    val selectedContentColor: Color,
+    val selectedHighlightColor: Color,
 ) {
     /**
      * Represents the content color for this button, depending on [selected].
