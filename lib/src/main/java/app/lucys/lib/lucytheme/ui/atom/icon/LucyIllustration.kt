@@ -4,14 +4,14 @@ import androidx.annotation.DrawableRes
 import app.lucys.lib.lucytheme.R
 
 enum class LucyIllustration(@DrawableRes val resourceId: Int) {
-    EmailCompleted(R.drawable.email_completed),
-    ErrorOccurred(R.drawable.error_occurred),
+    EmailCompleted(R.drawable.illust_email_completed),
+    ErrorOccurred(R.drawable.illust_error_occurred),
 
-    Welcome(R.drawable.welcome),
-    GoodBye(R.drawable.goodbye),
+    Welcome(R.drawable.illust_welcome),
+    GoodBye(R.drawable.illust_goodbye),
 
-    RippleTopEnd(R.drawable.ripple_top_end),
-    RippleBottomStart(R.drawable.ripple_bottom_start),
+    RippleTopEnd(R.drawable.illust_ripple_top_end),
+    RippleBottomStart(R.drawable.illust_ripple_bottom_start),
 
     Communication(R.drawable.illust_communication),
     SocialMedia(R.drawable.illust_socialmedia),
