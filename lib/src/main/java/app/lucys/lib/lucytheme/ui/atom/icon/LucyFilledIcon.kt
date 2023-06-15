@@ -16,4 +16,8 @@ enum class LucyFilledIcon(@DrawableRes val resourceId: Int) {
     Printer(R.drawable.icon_filled_printer),
     PayLater(R.drawable.icon_filled_paylater),
     Clear(R.drawable.icon_filled_x_circle),
+    Lock(R.drawable.icon_filled_lock_closed),
+    Mail(R.drawable.icon_filled_mail),
+    Eye(R.drawable.icon_filled_eye),
+    EyeOff(R.drawable.icon_filled_eye_off),
 }

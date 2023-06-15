@@ -24,4 +24,8 @@ enum class LucyOutlineIcon(@DrawableRes val resourceId: Int) {
     Tiktok(R.drawable.drawable_tiktok),
     Maps(R.drawable.drawable_maps),
     Facebook(R.drawable.drawable_facebook),
+    Lock(R.drawable.icon_outline_lock_closed),
+    Mail(R.drawable.icon_outline_mail),
+    Eye(R.drawable.icon_outline_eye),
+    EyeOff(R.drawable.icon_outline_eye_off),
 }
