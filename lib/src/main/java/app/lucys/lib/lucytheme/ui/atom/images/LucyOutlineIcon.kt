@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.atom.icon
+package app.lucys.lib.lucytheme.ui.atom.images
 
 import androidx.annotation.DrawableRes
 import app.lucys.lib.lucytheme.R
@@ -18,12 +18,6 @@ enum class LucyOutlineIcon(@DrawableRes val resourceId: Int) {
     Printer(R.drawable.icon_outline_printer),
     PayLater(R.drawable.icon_outline_paylater),
     Logout(R.drawable.icon_outline_logout),
-    Twitter(R.drawable.drawable_twitter),
-    Whatsapp(R.drawable.drawable_whatsapp),
-    Instagram(R.drawable.drawable_instagram),
-    Tiktok(R.drawable.drawable_tiktok),
-    Maps(R.drawable.drawable_maps),
-    Facebook(R.drawable.drawable_facebook),
     Lock(R.drawable.icon_outline_lock_closed),
     Mail(R.drawable.icon_outline_mail),
     Eye(R.drawable.icon_outline_eye),

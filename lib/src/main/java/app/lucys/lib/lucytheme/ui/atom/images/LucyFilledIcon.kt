@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.atom.icon
+package app.lucys.lib.lucytheme.ui.atom.images
 
 import androidx.annotation.DrawableRes
 import app.lucys.lib.lucytheme.R

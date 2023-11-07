@@ -23,6 +23,7 @@ data class LucyTypography(
     val largeBody: TextStyle,
     val mediumBody: TextStyle,
     val smallBody: TextStyle,
+    val xSmallBody: TextStyle,
 
     // Buttons
     val largeButton: TextStyle,
@@ -36,6 +37,119 @@ data class LucyTypography(
     // Misc
     val label: TextStyle,
     val brand: TextStyle,
+)
+
+internal val LucyTabletTypography = LucyTypography(
+    brand = TextStyle(
+        fontFamily = LucyBrandFontFamily,
+        fontWeight = LucyFontWeight.ExtraBold,
+        fontSize = 36.sp,
+    ),
+    largeTitle = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.ExtraBold,
+        fontSize = 28.sp,
+        lineHeight = 52.sp,
+    ),
+    mediumTitle = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.ExtraBold,
+        fontSize = 24.sp,
+        lineHeight = 44.sp,
+    ),
+    smallTitle = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.ExtraBold,
+        fontSize = 20.sp,
+        lineHeight = 38.sp,
+    ),
+    xSmallTitle = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.ExtraBold,
+        fontSize = 16.sp,
+        lineHeight = 32.sp,
+    ),
+    largeHeadline = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Bold,
+        fontSize = 24.sp,
+        lineHeight = 44.sp,
+    ),
+    mediumHeadline = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Bold,
+        fontSize = 20.sp,
+        lineHeight = 38.sp,
+    ),
+    smallHeadline = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Bold,
+        fontSize = 16.sp,
+        lineHeight = 32.sp,
+    ),
+    xSmallHeadline = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Bold,
+        fontSize = 14.sp,
+        lineHeight = 24.sp,
+    ),
+    largeBody = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Regular,
+        fontSize = 20.sp,
+        lineHeight = 38.sp,
+    ),
+    mediumBody = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Regular,
+        fontSize = 16.sp,
+        lineHeight = 32.sp,
+    ),
+    smallBody = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Regular,
+        fontSize = 14.sp,
+        lineHeight = 24.sp,
+    ),
+    xSmallBody = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Regular,
+        fontSize = 12.sp,
+        lineHeight = 22.sp,
+    ),
+    largeButton = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.SemiBold,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+    ),
+    smallButton = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.SemiBold,
+        fontSize = 14.sp,
+        lineHeight = 24.sp,
+    ),
+    mediumCaption = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.SemiBold,
+        fontSize = 12.sp,
+    ),
+    smallCaption = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Regular,
+        fontSize = 10.sp,
+    ),
+    boldCaption = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Bold,
+        fontSize = 10.sp,
+        letterSpacing = 0.5.sp,
+    ),
+    label = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Bold,
+        fontSize = 10.sp,
+    ),
 )
 
 internal val LucyMobileTypography = LucyTypography(
@@ -99,6 +213,11 @@ internal val LucyMobileTypography = LucyTypography(
         fontWeight = LucyFontWeight.Regular,
         fontSize = 12.sp,
     ),
+    xSmallBody = TextStyle(
+        fontFamily = LucyFontFamily,
+        fontWeight = LucyFontWeight.Regular,
+        fontSize = 12.sp,
+    ),
     largeButton = TextStyle(
         fontFamily = LucyFontFamily,
         fontWeight = LucyFontWeight.SemiBold,
@@ -146,6 +265,7 @@ internal val LocalLucyTypography = staticCompositionLocalOf {
         largeBody = TextStyle.Default,
         mediumBody = TextStyle.Default,
         smallBody = TextStyle.Default,
+        xSmallBody = TextStyle.Default,
         largeButton = TextStyle.Default,
         smallButton = TextStyle.Default,
         mediumCaption = TextStyle.Default,
