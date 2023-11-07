@@ -10,18 +10,23 @@ fun LucyTheme(
     darkColors: LucyColors? = null,
     typography: LucyTypography? = null,
     spacing: LucyDimension? = null,
+    isMobile: Boolean = true,
     content: @Composable () -> Unit,
 ) {
     val colors = when (isDarkTheme) {
         true -> darkColors ?: LucyLightColors
         false -> lightColors ?: LucyLightColors
     }
-    val mTypography = typography ?: LucyMobileTypography
+    val mTypography = when {
+        isMobile -> LucyMobileTypography
+        else -> LucyTabletTypography
+    }
+    val type = typography ?: mTypography
     val dimension = spacing ?: LucyMobileDimension
 
     CompositionLocalProvider(
         LocalLucyColors provides colors,
-        LocalLucyTypography provides mTypography,
+        LocalLucyTypography provides type,
         LocalLucyDimension provides dimension,
     ) {
         content()
