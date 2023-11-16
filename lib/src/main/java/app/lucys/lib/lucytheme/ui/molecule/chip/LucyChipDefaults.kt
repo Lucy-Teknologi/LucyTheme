@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.molecule
+package app.lucys.lib.lucytheme.ui.molecule.chip
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.PaddingValues

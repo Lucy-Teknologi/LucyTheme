@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.molecule
+package app.lucys.lib.lucytheme.ui.molecule.timelapse
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape

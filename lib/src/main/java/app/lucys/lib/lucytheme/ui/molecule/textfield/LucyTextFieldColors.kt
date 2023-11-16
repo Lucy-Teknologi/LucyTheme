@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.molecule
+package app.lucys.lib.lucytheme.ui.molecule.textfield
 
 import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material3.OutlinedTextFieldDefaults
