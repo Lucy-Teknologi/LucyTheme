@@ -74,6 +74,34 @@ fun LucySideSheet(
 }
 
 @Composable
+fun LucyBorderlessSideSheet(
+    title: @Composable () -> Unit,
+    content: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    backgroundColor: Color = LucyTheme.colors.neutral10,
+    shape: Shape = RectangleShape,
+    contentPadding: PaddingValues = LucySideSheetDefaults.ContentPadding,
+    maxWidth: Dp = LucySideSheetDefaults.MaxWidth,
+) {
+    Surface(
+        modifier = modifier.widthIn(max = maxWidth),
+        color = backgroundColor,
+        shape = shape,
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(contentPadding),
+            horizontalAlignment = Alignment.Start,
+            verticalArrangement = Arrangement.Top,
+        ) {
+            title()
+            content()
+        }
+    }
+}
+
+@Composable
 fun LucySideSheetTitle(
     title: @Composable () -> Unit,
     close: @Composable () -> Unit,
@@ -96,7 +124,7 @@ fun LucySideSheetTitle(
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(device = "spec:width=1280dp,height=800dp,dpi=240", showBackground = true)
 @Composable
-fun LucySideSheet_Preview() {
+internal fun LucySideSheet_Preview() {
     LucyTheme(isMobile = false) {
         Row(
             Modifier
