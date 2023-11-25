@@ -22,4 +22,12 @@ enum class LucyOutlineIcon(@DrawableRes val resourceId: Int) {
     Mail(R.drawable.icon_outline_mail),
     Eye(R.drawable.icon_outline_eye),
     EyeOff(R.drawable.icon_outline_eye_off),
+
+    ChevronLeft(R.drawable.icon_outline_chevron_left),
+    ChevronRight(R.drawable.icon_outline_chevron_right),
+    ChevronUp(R.drawable.icon_outline_chevron_up),
+    ChevronDown(R.drawable.icon_outline_chevron_down),
+    Filter(R.drawable.icon_outline_filter),
+    SortAscending(R.drawable.icon_outline_sort_ascending),
+    SortDescending(R.drawable.icon_outline_sort_descending),
 }

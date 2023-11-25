@@ -20,5 +20,14 @@ enum class LucyFilledIcon(@DrawableRes val resourceId: Int) {
     Mail(R.drawable.icon_filled_mail),
     Eye(R.drawable.icon_filled_eye),
     EyeOff(R.drawable.icon_filled_eye_off),
+
+    ChevronLeft(R.drawable.icon_filled_chevron_left),
+    ChevronRight(R.drawable.icon_filled_chevron_right),
+    ChevronUp(R.drawable.icon_filled_chevron_up),
+    ChevronDown(R.drawable.icon_filled_chevron_down),
+
+    SortAscending(R.drawable.icon_filled_sort_ascending),
+    SortDescending(R.drawable.icon_filled_sort_descending),
+    Filter(R.drawable.icon_filled_filter),
     Server(R.drawable.icon_filled_server)
 }
