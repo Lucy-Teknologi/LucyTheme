@@ -21,7 +21,7 @@ fun ifComposable(
 
 @Preview(device = "spec:width=411dp,height=891dp")
 @Composable
-fun IfComposable_Preview() {
+fun IfComposable_True_Preview() {
     LucyTheme {
         Column(modifier = Modifier.fillMaxSize()) {
             Box(
@@ -32,6 +32,31 @@ fun IfComposable_Preview() {
                 Text("Content", modifier = Modifier.fillMaxWidth())
             }
             ifComposable({ true }) {
+                Box(
+                    modifier = Modifier
+                        .weight(0.3f)
+                        .background(LucyTheme.colors.dangerMain),
+                ) {
+                    Text("Other Content", modifier = Modifier.fillMaxWidth())
+                }
+            }?.invoke()
+        }
+    }
+}
+
+@Preview(device = "spec:width=411dp,height=891dp")
+@Composable
+fun IfComposable_False_Preview() {
+    LucyTheme {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Box(
+                modifier = Modifier
+                    .weight(0.7f)
+                    .background(LucyTheme.colors.dangerSurface),
+            ) {
+                Text("Content", modifier = Modifier.fillMaxWidth())
+            }
+            ifComposable({ false }) {
                 Box(
                     modifier = Modifier
                         .weight(0.3f)
