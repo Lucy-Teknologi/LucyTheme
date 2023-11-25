@@ -20,4 +20,5 @@ enum class LucyFilledIcon(@DrawableRes val resourceId: Int) {
     Mail(R.drawable.icon_filled_mail),
     Eye(R.drawable.icon_filled_eye),
     EyeOff(R.drawable.icon_filled_eye_off),
+    Server(R.drawable.icon_filled_server)
 }
