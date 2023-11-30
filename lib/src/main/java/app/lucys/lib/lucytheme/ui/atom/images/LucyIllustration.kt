@@ -5,7 +5,7 @@ import app.lucys.lib.lucytheme.R
 
 enum class LucyIllustration(@DrawableRes val resourceId: Int) {
     EmailCompleted(R.drawable.illust_email_completed),
-    ErrorOccurred(R.drawable.illust_error_occurred),
+    ErrorOccurred(R.drawable.illust_socialmedia),
 
     Welcome(R.drawable.illust_welcome),
     GoodBye(R.drawable.illust_goodbye),
@@ -15,5 +15,8 @@ enum class LucyIllustration(@DrawableRes val resourceId: Int) {
 
     Communication(R.drawable.illust_communication),
     SocialMedia(R.drawable.illust_socialmedia),
-    Workflow(R.drawable.illust_workflow)
+    Workflow(R.drawable.illust_workflow),
+
+    Brainstorm(R.drawable.illust_brainstorm),
+    Finance(R.drawable.illust_finance)
 }
