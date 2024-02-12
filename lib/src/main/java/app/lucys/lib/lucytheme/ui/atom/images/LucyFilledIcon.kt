@@ -29,4 +29,5 @@ enum class LucyFilledIcon(@DrawableRes val resourceId: Int) {
     SortAscending(R.drawable.icon_filled_sort_ascending),
     SortDescending(R.drawable.icon_filled_sort_descending),
     Filter(R.drawable.icon_filled_filter),
+    Server(R.drawable.icon_filled_server)
 }
