@@ -38,6 +38,7 @@ fun LucyTextField(
     singleLine: Boolean = false,
     readOnly: Boolean = false,
     maxLines: Int = Int.MAX_VALUE,
+    minLines: Int = 1,
 ) {
     OutlinedTextField(
         onValueChange = onValueChange,
@@ -59,6 +60,7 @@ fun LucyTextField(
         shape = shape,
         colors = colors,
         readOnly = readOnly,
+        minLines = minLines,
     )
 }
 
