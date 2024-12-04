@@ -5,10 +5,10 @@ import androidx.compose.foundation.interaction.Interaction
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxColors
 import androidx.compose.material3.CheckboxDefaults
+import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -86,7 +86,7 @@ fun LucyCheckbox(
             enabled = enabled,
             onClick = { onCheckedChange?.invoke(!checked) },
             interactionSource = interactionSource,
-            indication = rememberRipple(),
+            indication = ripple(),
         ),
         horizontalArrangement = Arrangement.spacedBy(LucyTheme.spacing.small),
         verticalAlignment = Alignment.CenterVertically,
