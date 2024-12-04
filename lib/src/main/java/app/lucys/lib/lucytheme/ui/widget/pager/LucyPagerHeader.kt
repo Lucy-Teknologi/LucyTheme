@@ -4,10 +4,11 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.TabRowDefaults
+import androidx.compose.material3.TabRowDefaults.SecondaryIndicator
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
@@ -41,7 +42,7 @@ fun LucyPagerHeader(
     itemHighlightHeight: Dp = LucyPagerHeaderDefaults.HighlightHeight,
     pagerState: PagerState,
     pageCount: Int,
-    divider: @Composable () -> Unit = { Divider() },
+    divider: @Composable () -> Unit = { HorizontalDivider() },
     pageTitle: @Composable (Int) -> Unit,
 ) {
     val coroutineScope = rememberCoroutineScope()
@@ -50,12 +51,11 @@ fun LucyPagerHeader(
         modifier = modifier,
         selectedTabIndex = pagerState.currentPage,
         indicator = { tabPositions ->
-            TabRowDefaults
-                .Indicator(
-                    modifier = Modifier.tabIndicatorOffset(tabPositions[pagerState.currentPage]),
-                    height = itemHighlightHeight,
-                    color = colors.selectedHighlightColor,
-                )
+            SecondaryIndicator(
+                modifier = Modifier.tabIndicatorOffset(tabPositions[pagerState.currentPage]),
+                height = itemHighlightHeight,
+                color = colors.selectedHighlightColor
+            )
         },
         divider = divider,
     ) {
