@@ -14,8 +14,8 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        minSdk = 27
-        version = "0.3.1"
+        minSdk = 26
+        version = "0.3.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -84,6 +84,12 @@ publishing {
             artifactId = "lucy-theme"
             version = project.version as String
             afterEvaluate { from(components["release"]) }
+
+            pom {
+                name.set("Lucy Theme")
+                description.set("Jetpack compose custom theme for the lucy apps.")
+                url.set("https://github.com/Lucy-Teknologi/LucyTheme")
+            }
         }
     }
 }
