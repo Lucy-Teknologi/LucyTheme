@@ -7,7 +7,7 @@ kotlinAndroidVersion = "2.0.0"
 composeBomVersion = "2024.11.00"
 
 # Date Time
-kotlinxDatetimeVersion = "0.5.0"
+kotlinxDatetimeVersion = "0.6.1"
 
 # Testing
 espressoCore = "3.6.1"
