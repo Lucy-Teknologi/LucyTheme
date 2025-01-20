@@ -46,6 +46,8 @@ fun TutorialCoordinator(
     onDone: () -> Unit,
     state: TutorialState = rememberTutorialState(true),
     contentAlignment: Alignment = Alignment.TopStart,
+    colors: TutorialCoordinatorColors = TutorialCoordinatorDefaults.colors(),
+    style: TutorialCoordinatorStyle = TutorialCoordinatorDefaults.style(),
     content: @Composable TutorialScope.() -> Unit,
 ) {
     val scope = remember(state) { TutorialScope(state) }
@@ -84,7 +86,12 @@ fun TutorialCoordinator(
                     target = target,
                 )
 
-                TutorialDisplay(target = target)
+                TutorialDisplay(
+                    target = target,
+                    cap = state.size,
+                    colors = colors,
+                    style = style,
+                )
             }
         }
     }

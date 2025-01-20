@@ -23,6 +23,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import app.lucys.lib.lucytheme.ui.organism.TutorialCoordinatorColors
+import app.lucys.lib.lucytheme.ui.organism.TutorialCoordinatorStyle
 import app.lucys.lib.lucytheme.ui.theme.LucyTheme
 import app.lucys.lib.lucytheme.ui.util.TutorialTarget
 import kotlin.math.roundToInt
@@ -30,7 +32,10 @@ import kotlin.math.roundToInt
 @Composable
 fun BoxWithConstraintsScope.TutorialDisplay(
     modifier: Modifier = Modifier,
+    cap: Int,
     target: TutorialTarget,
+    colors: TutorialCoordinatorColors,
+    style: TutorialCoordinatorStyle,
 ) {
     val density = LocalDensity.current
     var offset: IntOffset by remember { mutableStateOf(IntOffset.Zero) }
@@ -94,20 +99,23 @@ fun BoxWithConstraintsScope.TutorialDisplay(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = "Step ${target.index + 1}",
+                text = "${target.index + 1}/$cap",
                 style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Center,
+                color = colors.counterColor,
             )
             Text(
                 text = target.title,
                 style = MaterialTheme.typography.bodySmall,
                 maxLines = 1,
+                color = colors.titleColor,
             )
             Text(
                 text = target.description,
                 style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Center,
                 maxLines = 2,
+                color = colors.contentColor,
             )
         }
     }
