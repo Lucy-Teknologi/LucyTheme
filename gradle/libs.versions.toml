@@ -4,7 +4,7 @@ androidGradleVersion = "8.6.1"
 kotlinAndroidVersion = "2.0.0"
 
 # Compose
-composeBomVersion = "2024.11.00"
+composeBomVersion = "2025.01.00"
 
 # Date Time
 kotlinxDatetimeVersion = "0.6.1"
