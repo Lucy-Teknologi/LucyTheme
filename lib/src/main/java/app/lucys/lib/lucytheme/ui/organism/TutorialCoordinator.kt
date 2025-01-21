@@ -37,8 +37,9 @@ import app.lucys.lib.lucytheme.ui.util.TutorialTarget
 
 @Composable
 fun rememberTutorialState(
-    initialVisible: Boolean
-) = rememberSaveable(saver = TutorialState.saver) { TutorialState(initialVisible) }
+    initialVisible: Boolean,
+    maxCount: Int? = null,
+) = rememberSaveable(saver = TutorialState.saver) { TutorialState(initialVisible, maxCount) }
 
 @Composable
 fun TutorialCoordinator(
@@ -173,7 +174,7 @@ class TutorialState(
 
     val currentTarget get() = tapTargets[currentIndex]
 
-    val isDone: Boolean get() = currentIndex >= tapTargets.size && !isVisible
+    val isDone: Boolean get() = currentIndex >= tapTargets.size || !isVisible
 
     val size: Int get() = maxCount ?: tapTargets.size
 
@@ -192,16 +193,17 @@ class TutorialState(
 
     fun skip() {
         isVisible = false
-        currentIndex = tapTargets.size
+        currentIndex = maxCount ?: tapTargets.size
     }
 
     companion object {
         val saver: Saver<TutorialState, *> = listSaver(
-            save = { p -> listOf(p.currentIndex, p.isVisible) },
+            save = { p -> listOf(p.currentIndex, p.isVisible, p.maxCount) },
             restore = { p ->
                 val index = p.first() as Int
                 val visible = p[1] as Boolean
-                TutorialState(visible).apply { currentIndex = index }
+                val count = p[2] as Int?
+                TutorialState(visible, count).apply { currentIndex = index }
             }
         )
     }
