@@ -48,6 +48,7 @@ fun TutorialCoordinator(
     contentAlignment: Alignment = Alignment.TopStart,
     colors: TutorialCoordinatorColors = TutorialCoordinatorDefaults.colors(),
     style: TutorialCoordinatorStyle = TutorialCoordinatorDefaults.style(),
+    visibility: TutorialCounterVisibility = TutorialCounterVisibility.VISIBLE,
     content: @Composable TutorialScope.() -> Unit,
 ) {
     val scope = remember(state) { TutorialScope(state) }
@@ -91,6 +92,7 @@ fun TutorialCoordinator(
                     cap = state.size,
                     colors = colors,
                     style = style,
+                    visibility = visibility,
                 )
             }
         }

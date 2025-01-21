@@ -1,6 +1,5 @@
 package app.lucys.lib.lucytheme.ui.organism
 
-import android.graphics.fonts.Font
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.TextStyle
 
@@ -8,7 +7,7 @@ import androidx.compose.ui.text.TextStyle
 class TutorialCoordinatorStyle constructor(
     val title: TextStyle,
     val counter: TextStyle,
-    val content: TextStyle,
+    val description: TextStyle,
 ) {
     fun copy(
         title: TextStyle? = null,
@@ -17,6 +16,6 @@ class TutorialCoordinatorStyle constructor(
     ): TutorialCoordinatorStyle = TutorialCoordinatorStyle(
         title = title ?: this.title,
         counter = counter ?: this.counter,
-        content = content ?: this.content,
+        description = content ?: this.description,
     )
 }

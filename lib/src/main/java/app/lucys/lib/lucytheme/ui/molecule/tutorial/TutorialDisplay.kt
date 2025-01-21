@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -25,6 +24,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import app.lucys.lib.lucytheme.ui.organism.TutorialCoordinatorColors
 import app.lucys.lib.lucytheme.ui.organism.TutorialCoordinatorStyle
+import app.lucys.lib.lucytheme.ui.organism.TutorialCounterVisibility
 import app.lucys.lib.lucytheme.ui.theme.LucyTheme
 import app.lucys.lib.lucytheme.ui.util.TutorialTarget
 import kotlin.math.roundToInt
@@ -36,6 +36,7 @@ fun BoxWithConstraintsScope.TutorialDisplay(
     target: TutorialTarget,
     colors: TutorialCoordinatorColors,
     style: TutorialCoordinatorStyle,
+    visibility: TutorialCounterVisibility,
 ) {
     val density = LocalDensity.current
     var offset: IntOffset by remember { mutableStateOf(IntOffset.Zero) }
@@ -98,21 +99,24 @@ fun BoxWithConstraintsScope.TutorialDisplay(
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(
-                text = "${target.index + 1}/$cap",
-                style = MaterialTheme.typography.bodySmall,
-                textAlign = TextAlign.Center,
-                color = colors.counterColor,
-            )
+            if (visibility == TutorialCounterVisibility.VISIBLE) {
+                Text(
+                    text = "${target.index + 1}/$cap",
+                    style = style.counter,
+                    textAlign = TextAlign.Center,
+                    color = colors.counterColor,
+                )
+            }
+            
             Text(
                 text = target.title,
-                style = MaterialTheme.typography.bodySmall,
+                style = style.title,
                 maxLines = 1,
                 color = colors.titleColor,
             )
             Text(
                 text = target.description,
-                style = MaterialTheme.typography.bodySmall,
+                style = style.description,
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 color = colors.contentColor,
