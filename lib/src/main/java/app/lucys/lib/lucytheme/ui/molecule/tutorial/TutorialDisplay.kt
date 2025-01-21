@@ -43,7 +43,7 @@ fun BoxWithConstraintsScope.TutorialDisplay(
 
     Card(
         modifier = modifier
-            .sizeIn(maxWidth = 220.dp, maxHeight = 120.dp)
+            .sizeIn(maxWidth = 220.dp)
             .onPlaced { layout ->
                 val screenWidthPx = constraints.maxWidth
                 val screenHeightPx = constraints.maxHeight
@@ -107,7 +107,7 @@ fun BoxWithConstraintsScope.TutorialDisplay(
                     color = colors.counterColor,
                 )
             }
-            
+
             Text(
                 text = target.title,
                 style = style.title,
@@ -118,7 +118,7 @@ fun BoxWithConstraintsScope.TutorialDisplay(
                 text = target.description,
                 style = style.description,
                 textAlign = TextAlign.Center,
-                maxLines = 2,
+                maxLines = 3,
                 color = colors.contentColor,
             )
         }

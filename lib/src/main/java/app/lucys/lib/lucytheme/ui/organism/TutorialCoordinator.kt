@@ -173,7 +173,7 @@ class TutorialState(
 
     val currentTarget get() = tapTargets[currentIndex]
 
-    val isDone: Boolean get() = currentIndex >= tapTargets.size || !isVisible
+    val isDone: Boolean get() = currentIndex >= tapTargets.size && !isVisible
 
     val size: Int get() = maxCount ?: tapTargets.size
 
