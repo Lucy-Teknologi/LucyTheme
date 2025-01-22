@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.organism
+package app.lucys.lib.lucytheme.ui.organism.tutorial
 
 import androidx.compose.animation.core.animateOffsetAsState
 import androidx.compose.foundation.clickable
@@ -174,9 +174,9 @@ class TutorialState(
 
     val currentTarget get() = tapTargets[currentIndex]
 
-    val isDone: Boolean get() = currentIndex >= tapTargets.size || !isVisible
-
     val size: Int get() = maxCount ?: tapTargets.size
+
+    val isDone: Boolean get() = currentIndex >= size || !isVisible
 
     fun reset() {
         isVisible = true

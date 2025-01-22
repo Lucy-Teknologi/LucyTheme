@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.organism
+package app.lucys.lib.lucytheme.ui.organism.sidesheet
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

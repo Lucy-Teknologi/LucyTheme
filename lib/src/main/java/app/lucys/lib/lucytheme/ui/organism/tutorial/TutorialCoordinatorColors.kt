@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.organism
+package app.lucys.lib.lucytheme.ui.organism.tutorial
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color

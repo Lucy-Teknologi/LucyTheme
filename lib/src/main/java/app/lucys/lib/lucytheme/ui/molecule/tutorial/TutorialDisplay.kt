@@ -22,9 +22,9 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
-import app.lucys.lib.lucytheme.ui.organism.TutorialCoordinatorColors
-import app.lucys.lib.lucytheme.ui.organism.TutorialCoordinatorStyle
-import app.lucys.lib.lucytheme.ui.organism.TutorialCounterVisibility
+import app.lucys.lib.lucytheme.ui.organism.tutorial.TutorialCoordinatorColors
+import app.lucys.lib.lucytheme.ui.organism.tutorial.TutorialCoordinatorStyle
+import app.lucys.lib.lucytheme.ui.organism.tutorial.TutorialCounterVisibility
 import app.lucys.lib.lucytheme.ui.theme.LucyTheme
 import app.lucys.lib.lucytheme.ui.util.TutorialTarget
 import kotlin.math.roundToInt

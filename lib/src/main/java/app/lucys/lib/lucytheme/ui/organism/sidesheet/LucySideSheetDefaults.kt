@@ -1,4 +1,4 @@
-package app.lucys.lib.lucytheme.ui.organism
+package app.lucys.lib.lucytheme.ui.organism.sidesheet
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.ui.graphics.Color
