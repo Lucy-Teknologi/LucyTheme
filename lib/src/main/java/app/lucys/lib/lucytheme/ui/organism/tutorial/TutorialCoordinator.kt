@@ -39,7 +39,8 @@ import app.lucys.lib.lucytheme.ui.util.TutorialTarget
 fun rememberTutorialState(
     initialVisible: Boolean,
     maxCount: Int? = null,
-) = rememberSaveable(saver = TutorialState.saver) { TutorialState(initialVisible, maxCount) }
+    keys: List<Int>? = null,
+) = rememberSaveable(saver = TutorialState.saver) { TutorialState(initialVisible, maxCount, keys) }
 
 @Composable
 fun TutorialCoordinator(
