@@ -15,4 +15,5 @@ class TutorialTarget(
     val description: String,
     val coordinates: LayoutCoordinates,
     val onClick: () -> Unit,
+    val key: Int? = null,
 )

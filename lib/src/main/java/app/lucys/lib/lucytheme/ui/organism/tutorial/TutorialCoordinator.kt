@@ -147,6 +147,7 @@ class TutorialScope(private val state: TutorialState) {
         title: String,
         description: String,
         onClick: () -> Unit = {},
+        key: Int? = null,
     ): Modifier {
         return onPlaced { coordinate ->
             state.attach(
@@ -156,6 +157,7 @@ class TutorialScope(private val state: TutorialState) {
                     description = description,
                     coordinates = coordinate,
                     onClick = onClick,
+                    key = key,
                 )
             )
         }
@@ -167,6 +169,7 @@ class TutorialScope(private val state: TutorialState) {
 class TutorialState(
     initiallyVisible: Boolean,
     private var maxCount: Int? = null,
+    private val keys: List<Int>? = null,
 ) {
     var isVisible by mutableStateOf(initiallyVisible)
     private var tapTargets = mutableStateMapOf<Int, TutorialTarget>()
@@ -188,6 +191,13 @@ class TutorialState(
     }
 
     fun attach(target: TutorialTarget) {
+        if (keys == null) {
+            tapTargets[target.index] = target
+            return
+        }
+        if (target.key == null) return
+        if (target.key !in keys) return
+
         tapTargets[target.index] = target
     }
 
