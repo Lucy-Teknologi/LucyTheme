@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         minSdk = 26
-        version = "0.3.6-rc02"
+        version = "0.3.7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
