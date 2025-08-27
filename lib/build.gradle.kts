@@ -11,11 +11,11 @@ plugins {
 
 android {
     namespace = "app.lucys.lib.lucytheme"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 26
-        version = "0.3.7"
+        version = "0.4.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
